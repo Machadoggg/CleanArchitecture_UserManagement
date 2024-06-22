@@ -5,4 +5,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CleanArchitecture_UserManagement.Application\CleanArchitecture_UserManagement.Application.csproj" />
+  </ItemGroup>
+
 </Project>
