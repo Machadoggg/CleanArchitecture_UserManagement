@@ -9,7 +9,32 @@ namespace CleanArchitecture_UserManagement.Infrastructure.Repositories
 {
     public class InMemoryUserRepository : IUserRepository
     {
-        private readonly List<User> _users = new List<User>();
+        //private readonly List<User> _users = new List<User>();
+
+        private readonly List<User> _users = new List<User>
+            {
+                new User
+                {
+                    Id = Guid.NewGuid(),
+                    Username = "user1",
+                    PasswordHash = "passwordHash1",
+                    Email = "user1@example.com"
+                },
+                new User
+                {
+                    Id = Guid.NewGuid(),
+                    Username = "user2",
+                    PasswordHash = "passwordHash2",
+                    Email = "user2@example.com"
+                },
+                new User
+                {
+                    Id = Guid.NewGuid(),
+                    Username = "user3",
+                    PasswordHash = "passwordHash3",
+                    Email = "user3@example.com"
+                }
+            };
 
 
         public Task AddUserAsync(User user)
